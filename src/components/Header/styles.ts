@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
   padding: 0 2rem;
   display: flex;
   align-items: center;
+
+  button {
+    margin-left: auto;
+  }
 `;
 
 export const Navigation = styled.nav`

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SignInButton from './SignInButton';
 import { Container, Navigation, Wrapper } from './styles';
 
 function Header() {
@@ -11,6 +12,8 @@ function Header() {
           <a className="active">Home</a>
           <a>Posts</a>
         </Navigation>
+
+        <SignInButton />
       </Wrapper>
     </Container>
   )
