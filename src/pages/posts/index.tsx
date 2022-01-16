@@ -6,6 +6,7 @@ import { RichText } from 'prismic-dom';
 import getPrismicClient from 'services/prismic';
 
 import { Container, Wrapper } from 'styles/posts';
+import Link from 'next/link';
 
 type Post = {
   slug: string;
@@ -29,11 +30,13 @@ export default function Home({ posts }: PostsProps) {
       <Container>
         <Wrapper>
           {posts.map((post) => (
-            <a key={post.slug} href="#">
-              <time>{post.updatedAt}</time>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-            </a>
+            <Link href={`/posts/${post.slug}`}>
+              <a key={post.slug}>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>{post.excerpt}</p>
+              </a>
+            </Link>
           ))}
         </Wrapper>
       </Container>
