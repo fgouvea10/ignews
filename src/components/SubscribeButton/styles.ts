@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { gray_850, gray_900, white, yellow_500 } from 'styles/colors';
+import { gray_900, yellow_500 } from 'styles/colors';
 
 export const Container = styled.button.attrs({
   type: 'button'

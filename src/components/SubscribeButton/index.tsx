@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Container } from './styles';
 
-function SubscribeButton() {
-  return (
-    <Container>
-      Subscribe now
-    </Container>
-  );
+type SubscribeButtonProps = {
+  priceId: string;
+};
+
+function SubscribeButton({ priceId }: SubscribeButtonProps) {
+  return <Container>Subscribe now</Container>;
 }
 
 export default SubscribeButton;
