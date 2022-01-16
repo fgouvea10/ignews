@@ -1,4 +1,5 @@
 import React from 'react';
+import { signIn, useSession } from 'next-auth/react';
 
 import { Container } from './styles';
 
@@ -7,7 +8,16 @@ type SubscribeButtonProps = {
 };
 
 function SubscribeButton({ priceId }: SubscribeButtonProps) {
-  return <Container>Subscribe now</Container>;
+  const { data: session } = useSession();
+
+  const handleSubscribe = () => {
+    if (!session) {
+      signIn('github');
+      return;
+    }
+  }
+
+  return <Container onClick={handleSubscribe}>Subscribe now</Container>;
 }
 
 export default SubscribeButton;
