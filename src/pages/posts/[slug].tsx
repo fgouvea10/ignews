@@ -1,9 +1,9 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/react';
-import Head from "next/head";
-import { RichText } from "prismic-dom";
-import getPrismicClient from "services/prismic";
+import Head from 'next/head';
+import { RichText } from 'prismic-dom';
 
+import getPrismicClient from 'services/prismic';
 import { Container, Wrapper } from 'styles/post';
 
 type PostProps = {
@@ -12,8 +12,8 @@ type PostProps = {
     title: string;
     content: string;
     updatedAt: string;
-  }
-}
+  };
+};
 
 export default function Post({ post }: PostProps) {
   return (
@@ -30,16 +30,26 @@ export default function Post({ post }: PostProps) {
         </Wrapper>
       </Container>
     </>
-  )
+  );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  params,
+}) => {
   const session = await getSession({ req });
   const { slug } = params;
 
-  // if (!session)
+  if (!session.activeSubscription) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
 
-  const prismic = getPrismicClient(req)
+  const prismic = getPrismicClient(req);
 
   const response = await prismic.getByUID('publication', String(slug), {});
 
@@ -55,11 +65,11 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
         year: 'numeric',
       }
     ),
-  }
+  };
 
   return {
     props: {
       post,
-    }
-  }
-}
+    },
+  };
+};
