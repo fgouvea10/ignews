@@ -14,9 +14,16 @@ A blog containing news from the world of ReactJS. This application was built dur
 
 ## Run the project
 ```
+# clone this repo
 git clone https://github.com/fgouvea10/ignews.git
+
 cd ignews
+
+# install the dependencies
 yarn
+
+# run the app
+yarn dev
 ```
 
 Also, you must have the environment variables. You can find them [here](https://github.com/fgouvea10/ignews/blob/main/.env.example).
