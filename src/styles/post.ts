@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { gray_300, gray_50 } from './colors';
+import { gray_300, gray_50, gray_850, yellow_500 } from './colors';
 
 export const Container = styled.main`
   max-width: 1120px;
@@ -40,6 +40,32 @@ export const Wrapper = styled.article`
 
       li {
         margin: 0.5rem 0;
+      }
+    }
+
+    &.previewContent {
+      background: linear-gradient(#000000, transparent);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .continueReading {
+    padding: 2rem;
+    text-align: center;
+    background: ${gray_850};
+    border-radius: 100px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 4rem 0 2rem;
+
+    a {
+      color: ${yellow_500};
+      margin-left: 0%.5rem;
+      transition: text-decoration 0.2s ease;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
