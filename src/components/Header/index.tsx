@@ -1,9 +1,8 @@
 import React from 'react';
 
+import ActiveLink from './ActiveLink';
 import SignInButton from './SignInButton';
 import { Container, Navigation, Wrapper } from './styles';
-import { useRouter } from 'next/router';
-import ActiveLink from './ActiveLink';
 
 function Header() {
 

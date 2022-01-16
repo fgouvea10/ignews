@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import { gray_300, gray_800, white, yellow_500 } from 'styles/colors';
 
 export const Container = styled.header`

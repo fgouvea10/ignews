@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from 'react';
+
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useSession } from 'next-auth/react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RichText } from 'prismic-dom';
-import { useEffect } from 'react';
-
 import getPrismicClient from 'services/prismic';
 import { Container, Wrapper } from 'styles/post';
 

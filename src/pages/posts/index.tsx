@@ -1,12 +1,10 @@
+import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Prismic from '@prismicio/client';
-import { RichText } from 'prismic-dom';
-
-import getPrismicClient from 'services/prismic';
-
-import { Container, Wrapper } from 'styles/posts';
 import Link from 'next/link';
+import { RichText } from 'prismic-dom';
+import getPrismicClient from 'services/prismic';
+import { Container, Wrapper } from 'styles/posts';
 
 type Post = {
   slug: string;
@@ -30,8 +28,8 @@ export default function Home({ posts }: PostsProps) {
       <Container>
         <Wrapper>
           {posts.map((post) => (
-            <Link href={`/posts/${post.slug}`}>
-              <a key={post.slug}>
+            <Link key={post.slug} href={`/posts/${post.slug}`}>
+              <a>
                 <time>{post.updatedAt}</time>
                 <strong>{post.title}</strong>
                 <p>{post.excerpt}</p>

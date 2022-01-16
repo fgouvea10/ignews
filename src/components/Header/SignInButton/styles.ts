@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-
 import { gray_850, white } from 'styles/colors';
 
 export const Container = styled.button.attrs({
-  type: 'button'
+  type: 'button',
 })`
   height: 3rem;
   border-radius: 3rem;

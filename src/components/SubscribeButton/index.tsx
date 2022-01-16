@@ -1,10 +1,12 @@
-import { useRouter } from 'next/router';
-import { signIn, useSession } from 'next-auth/react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import toast from 'react-hot-toast';
 
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
 import { api } from 'services/api';
 import { getStripeJs } from 'services/stripe-js';
+
 import { Container } from './styles';
 
 type SubscribeButtonProps = {

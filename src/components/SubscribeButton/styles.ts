@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-
 import { gray_900, yellow_500 } from 'styles/colors';
 
 export const Container = styled.button.attrs({
-  type: 'button'
+  type: 'button',
 })`
   height: 4rem;
   width: 260px;

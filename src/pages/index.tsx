@@ -1,7 +1,6 @@
+import SubscribeButton from 'components/SubscribeButton';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-
-import SubscribeButton from 'components/SubscribeButton';
 import { stripe } from 'services/stripe';
 import { Container, Section } from 'styles/home';
 import { currency } from 'utils/currency';
@@ -14,7 +13,6 @@ type HomeProps = {
 };
 
 export default function Home({ product }: HomeProps) {
-
   return (
     <>
       <Head>

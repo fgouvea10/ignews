@@ -1,7 +1,9 @@
+/* eslint-disable no-case-declarations */
 import { NextApiRequest, NextApiResponse } from 'next';
 import { stripe } from 'services/stripe';
 import { Readable } from 'stream';
 import Stripe from 'stripe';
+
 import { saveSubscription } from './_lib/manageSubscription';
 
 async function buffer(readable: Readable) {
