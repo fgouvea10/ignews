@@ -283,6 +283,13 @@
   resolved "https://registry.yarnpkg.com/@panva/hkdf/-/hkdf-1.0.1.tgz#ed0da773bd5f794d0603f5a5b5cee6d2354e5660"
   integrity sha512-mMyQ9vjpuFqePkfe5bZVIf/H3Dmk6wA8Kjxff9RcO4kqzJo+Ek9pGKwZHpeMr7Eku0QhLXMCd7fNCSnEnRMubg==
 
+"@prismicio/client@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-4.0.0.tgz#45e5e8651b72b747ce4e21db04eae0b96139615a"
+  integrity sha512-3rGie+Banm61hOQcKF75+TI8oquVDT2PyX05ho2eRKdiMu0i4raHVJCuIAGBs/CDCuVXes2h/rnfRs+eKfq7XQ==
+  dependencies:
+    cross-fetch "^3.0.6"
+
 "@stripe/stripe-js@^1.22.0":
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.22.0.tgz#9d3d2f0a1ce81f185ec477fd7cc67544b2b2a00c"
