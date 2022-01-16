@@ -8,8 +8,6 @@ import { Container } from './styles';
 function SignInButton() {
   const { data: session } = useSession();
 
-  console.log(session);
-
   return (
     (session && (
       <Container onClick={() => signOut()}>
