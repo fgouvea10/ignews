@@ -13,7 +13,7 @@ A blog containing news from the world of ReactJS. This application was built dur
 - PrismicIO
 
 ## Run the project
-```
+```bash
 # clone this repo
 git clone https://github.com/fgouvea10/ignews.git
 
