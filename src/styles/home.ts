@@ -9,6 +9,17 @@ export const Container = styled.main`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const Section = styled.section`
@@ -43,5 +54,10 @@ export const Section = styled.section`
 
   button {
     margin-top: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
   }
 `;

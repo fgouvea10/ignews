@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import { SessionProvider as NextAuthProvider } from 'next-auth/react';
 
 import Header from 'components/Header';
 
@@ -6,11 +7,11 @@ import { GlobalStyle } from 'styles/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-        <Header />
-        <Component {...pageProps} />
-        <GlobalStyle />
-    </>
+    <NextAuthProvider session={pageProps.session}>
+      <Header />
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </NextAuthProvider>
   );
 }
 

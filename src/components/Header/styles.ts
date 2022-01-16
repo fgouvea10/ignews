@@ -18,6 +18,12 @@ export const Wrapper = styled.div`
   button {
     margin-left: auto;
   }
+
+  @media (max-width: 768px) {
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const Navigation = styled.nav`
